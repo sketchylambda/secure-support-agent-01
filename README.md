@@ -33,13 +33,16 @@ This application wraps **Gemini 2.5 Flash** in a robust security pipeline, ensur
 
 ## 🛠️ Tech Stack
 
-| Component | Technology | Description |
-| :--- | :--- | :--- |
-| **Core Framework** | Google GenAI ADK | Agent logic and routing |
-| **LLMs** | Gemini 2.5 Flash / Lite | Main agent and async safety judge |
-| **Frontend UI** | Chainlit | React-based conversational interface |
-| **DLP Middleware** | MS Presidio & spaCy | Real-time NLP entity recognition |
-| **Database** | SQLite3 | Local mock e-commerce backend |
+**Core Architecture & Frameworks**
+* **Backend API:** FastAPI, Uvicorn 
+* **Agent Orchestration:** Google GenAI ADK (Manages agent state, memory, and plugin execution)
+* **Frontend UI:** Vanilla HTML/CSS/JS, Chart.js (Responsive chat and interactive SOC dashboard)
+
+**AI & Security Pipeline**
+* **Main RAG Engine:** Gemini 2.5 Flash (Tool-calling and customer support reasoning)
+* **Asynchronous LLM Judge:** Gemini 2.5 Flash-Lite (Intent evaluation and prompt injection defense)
+* **Data Loss Prevention (DLP):** Microsoft Presidio, spaCy (Real-time NLP entity recognition and PII redaction)
+* **Database:** SQLite3 (Local e-commerce backend for testing secure data retrieval)
 
 ---
 
@@ -91,8 +94,8 @@ python server.py
 ```
 
 ### 6. Access the Interfaces
-*Customer Chat UI: Open your browser and navigate to `http://localhost:8000`
-*SOC Admin Dashboard: Open a second tab and navigate to `http://localhost:8000/admin`
+* Customer Chat UI: Open your browser and navigate to `http://localhost:8000`
+* SOC Admin Dashboard: Open a second tab and navigate to `http://localhost:8000/admin`
 
 ---
 
